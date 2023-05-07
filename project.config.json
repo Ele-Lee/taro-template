@@ -2,7 +2,7 @@
 	"miniprogramRoot": "dist/",
 	"projectname": "ai-paint",
 	"description": "",
-	"appid": "touristappid",
+	"appid": "wx6d9ac8b6eee0dc7f",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,

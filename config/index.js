@@ -1,4 +1,5 @@
 const env = process.env.TARO_ENV; // 编译时环境
+const path = require('path')
 
 const config = {
   projectName: 'ai-paint',
@@ -36,6 +37,10 @@ const config = {
   cache: {
     enable: false, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
   },
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src'),
+    'src': path.resolve(__dirname, '..', 'src'),
+  },
   mini: {
     postcss: {
       pxtransform: {
@@ -56,6 +61,11 @@ const config = {
         },
       },
     },
+    // webpackChain(chain, webp) {
+    //
+    //   chain.resolve.alias.set('@', path.resolve(__dirname, 'src'))
+    //   console.log('%celelee test:', 'color:#fff;background:#000', chain, webp)
+    // }
   },
   h5: {
     publicPath: '/',
